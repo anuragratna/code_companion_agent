@@ -1,14 +1,14 @@
-# Coder Buddy 🤖
+# Code companion 🤖
 
-**Coder Buddy** is a multi-agent AI system designed to automate the process of planning, architecting, and implementing software projects from simple natural language prompts. Built with **LangGraph** and **OpenAI**, it orchestrates three specialized agents to build functional codebases.
+**Code companion** is a multi-agent AI system designed to automate the process of planning, architecting, and implementing software projects from simple natural language prompts. Built with **LangGraph** and **OpenAI**, it orchestrates three specialized agents to build functional codebases.
 
 ## 🏗️ Architecture
 
 The system uses a graph-based workflow (via LangGraph) to coordinate three primary agents:
 
-1.  **Planner Agent**: 📝 Analyzes the user's request and creates a high-level engineering project plan, defining the tech stack, features, and file structure.
-2.  **Architect Agent**: 📐 Takes the project plan and breaks it down into explicit, ordered engineering tasks. It ensures that files are implemented in the correct order of dependency.
-3.  **Coder Agent**: 💻 A tool-using agent (ReAct) that implements each task by reading and writing files to the disk. It maintains context across steps to ensure consistent implementation.
+1.  **Planner Agent**: Analyzes the user's request and creates a high-level engineering project plan, defining the tech stack, features, and file structure.
+2.  **Architect Agent**: Takes the project plan and breaks it down into explicit, ordered engineering tasks. It ensures that files are implemented in the correct order of dependency.
+3.  **Coder Agent**: A tool-using agent (ReAct) that implements each task by reading and writing files to the disk. It maintains context across steps to ensure consistent implementation.
 
 ## 🛠️ Tech Stack
 
@@ -18,7 +18,7 @@ The system uses a graph-based workflow (via LangGraph) to coordinate three prima
 -   **Package Manager**: [uv](https://github.com/astral-sh/uv)
 -   **Environment**: Python >= 3.11
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
