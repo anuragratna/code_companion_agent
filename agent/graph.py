@@ -8,6 +8,7 @@ from langgraph.prebuilt import create_react_agent
 from agent.prompts import *
 from agent.states import *
 from agent.tools import write_file, read_file, get_current_directory, list_files, init_project_root
+from IPython.display import display, Image
 
 _ = load_dotenv()
 _ = init_project_root()
@@ -90,6 +91,13 @@ graph.add_conditional_edges(
 
 graph.set_entry_point("planner")
 agent = graph.compile()
+try:
+    with open("graph.png", "wb") as f:
+        f.write(agent.get_graph().draw_mermaid_png())
+    print("Graph image saved as graph.png")
+except Exception as e:
+    print(f"Could not save graph image: {e}")
+
 if __name__ == "__main__":
     result = agent.invoke({"user_prompt": "Build a colourful modern todo app in html css and js"},
                           {"recursion_limit": 100})

@@ -1,6 +1,6 @@
-# Code companion 🤖
+# Coder Companion 🤖
 
-**Code companion** is a multi-agent AI system designed to automate the process of planning, architecting, and implementing software projects from simple natural language prompts. Built with **LangGraph** and **OpenAI**, it orchestrates three specialized agents to build functional codebases.
+**Coder Companion** is a multi-agent AI system designed to automate the process of planning, architecting, and implementing software projects from simple natural language prompts. Built with **LangGraph** and **OpenAI**, it orchestrates three specialized agents to build functional codebases.
 
 ## 🏗️ Architecture
 
@@ -41,18 +41,33 @@ The system uses a graph-based workflow (via LangGraph) to coordinate three prima
 
 ### Usage
 
+#### CLI Interface
 Run the main entry point:
 ```bash
 uv run python main.py
 ```
+
+#### Web Interface (Recommended)
+Launch the web-based UI:
+```bash
+uv run python server.py
+```
+Then navigate to `http://localhost:8000/static/index.html` in your browser.
 
 Follow the prompt to enter your project description (e.g., "Build a landing page for a coffee shop"). The agent will generate the files in the `generated_project/` directory.
 
 ## 📁 Project Structure
 
 -   `main.py`: Interactive CLI entry point.
+-   `server.py`: FastAPI server for the web interface.
+-   `static/`: Frontend assets (HTML, CSS, JS).
 -   `agent/graph.py`: The LangGraph definition orchestration the agents.
 -   `agent/states.py`: Pydantic models for structured output and state management.
 -   `agent/tools.py`: File-system tools used by the Coder agent.
 -   `agent/prompts.py`: System prompts for each agent.
 -   `generated_project/`: The directory where the AI-generated code is stored.
+
+---
+
+#AI #AgenticAI #LangGraph #LangChain #OpenAI #GPT4 #Python #AutoGPT #SoftwareAutomation #CoderCompanion #AIAgent #MachineLearning #WebDevelopment #Backend #FastAPI
+

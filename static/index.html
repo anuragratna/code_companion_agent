@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder Companion | AI Agent</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="neural-dark">
+    <div class="background-glow"></div>
+    <main class="container">
+        <header>
+            <h1 class="glow-text">Coder Companion <span class="badge">AI</span></h1>
+            <p class="subtitle">Build your next project with multi-agent orchestration.</p>
+        </header>
+
+        <section class="interface-card glass">
+            <div class="input-group">
+                <textarea id="promptInput"
+                    placeholder="Describe your project (e.g., 'Build a colorful modern todo app in html css and js')"></textarea>
+                <button id="buildBtn" class="primary-btn">
+                    <span class="btn-text">Build Application</span>
+                    <div class="loader hidden"></div>
+                </button>
+            </div>
+
+            <div id="statusArea" class="status-hidden">
+                <div class="status-header">
+                    <span class="status-label">Status:</span>
+                    <span id="statusText">Idle</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="resultsArea" class="hidden glass">
+            <h3>Project Output</h3>
+            <div class="output-content">
+                <p>Project files have been generated in the <code>generated_project/</code> directory.</p>
+                <div id="fileList"></div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
